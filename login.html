@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>HTML + CSS</title>
+    <link rel="stylesheet" href="login.css" />
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        position: relative;
+      }
+      canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1; /* Set canvas behind other elements */
+      }
+      .form-structor {
+        position: relative;
+        z-index: 1; /* Set form in front of canvas */
+        background: rgba(
+          255,
+          255,
+          255,
+          0.9
+        ); /* Light background for better visibility */
+        padding: 20px;
+        border-radius: 10px;
+        width: 300px; /* Adjust the width as needed */
+        margin: 50px auto; /* Center the form */
+      }
+      .fa-solid {
+        color: black;
+      }
+    </style>
+    <a href="index.html" class="icon-link">
+      <i class="fa-solid fa-house"></i>
+    </a>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <!-- Background Animation Canvas -->
+    <canvas id="canvas"></canvas>
+
+    <div class="form-structor">
+      <div class="signup">
+        <h2 class="form-title" id="signup"><span>or</span>Sign up</h2>
+        <div class="form-holder">
+          <input type="text" class="input" placeholder="Name" required />
+          <input type="email" class="input" placeholder="Email" required />
+          <div class="pass">
+            <input
+              type="password"
+              class="input"
+              placeholder="Password"
+              id="password"
+              required
+            />
+            <i class="fa-solid fa-eye-slash" id="eye-icon"></i>
+          </div>
+          <div class="pass">
+            <input
+              type="password"
+              class="input"
+              placeholder="Confirm Password"
+              id="password"
+              required
+            />
+            <i class="fa-solid fa-eye-slash" id="eye-icon"></i>
+          </div>
+          <input
+            list="schools"
+            class="input"
+            name="school"
+            id="school"
+            placeholder="Enter Your School"
+          />
+          <datalist id="schools">
+            <option value="Agahozo-Shalom Youth Village"></option>
+            <option value="Gashora Girls Academy"></option>
+            <option value="Maranyundo Girls School"></option>
+            <option value="Rwanda Coding Academy"></option>
+            <option value="Chirst-Roi school"></option>
+            <option value="Lycee De Kigali"></option>
+            <option value="College St.Andre"></option>
+            <option value="Kayonza Modern School"></option>
+            <option value="FAWE Girls School Gahini"></option>
+            <option value="Rwamagana Leaders School"></option>
+            <option value="ENDP KARUBANDA"></option>
+            <option value="ES APAKAPE"></option>
+            <option value="ES BUMBOGO"></option>
+            <option value="ES BUGARAMA"></option>
+            <option value="ES CYABINGO"></option>
+            <option value="ES CYIMBIRI"></option>
+            <option value="ES GAFUNZO"></option>
+            <option value="ES GASENYI"></option>
+            <option value="ES GIKONKO"></option>
+            <option value="ES GISHOMA"></option>
+            <option value="ES KABARONDO"></option>
+            <option value="ES KABIRIZI"></option>
+            <option value="ES KANOMBE /EFOTEC"></option>
+            <option value="ES KARUGANDA"></option>
+            <option value="ES KIYANZA"></option>
+            <option value="ES KIGOMA"></option>
+            <option value="ES KIRINDA"></option>
+            <option value="ES KURUKUMU"></option>
+            <option value="ES MURAMA"></option>
+            <option value="ES MUBUGA"></option>
+            <option value="ES MUSHUBI"></option>
+            <option value="ES MUKINGI"></option>
+            <option value="ES MUNZANGA"></option>
+            <option value="ES NYAKABANDA"></option>
+            <option value="ES NYABIRASI"></option>
+            <option value="ES NYAMIRAMA"></option>
+            <option value="ES RUKOMO (SO.P.E.M)"></option>
+            <option value="ES RUTONGO"></option>
+            <option value="ES RUTOBWE"></option>
+            <option value="ES SAINT JEAN BOSCO SIMBI"></option>
+            <option value="ES SAINT PIERRE NKOMBO"></option>
+            <option value="ES STELLA MATUTINA"></option>
+            <option value="ES TYAZO"></option>
+            <option value="ES URUMURI"></option>
+            <option value="ES ZAZA"></option>
+            <option value="FAWE GIRLS SCHOOL"></option>
+            <option value="FAWE GIRLS SCHOOL GAHINI"></option>
+            <option value="G.S RUNYOMBYI I"></option>
+            <option value="G.S SAINT MATHIEU DE BUSASAMANA"></option>
+            <option value="G.S ST FRANCOIS D"></option>
+            <option value="G.S ST PHILIPPE NERI DE GISAGARA"></option>
+            <option value="G.S ST JOSEPH"></option>
+            <option value="G.S SAINT JOSEPH BIRAMBO"></option>
+            <option value="G.S ROSE MYSTICA"></option>
+            <option value="G.S RANGO"></option>
+            <option value="G.S ST JOSEPH NYAMASHEKE"></option>
+            <option value="G.S BIGUGU"></option>
+            <option value="G.S NDA NYUNDO"></option>
+            <option value="G.S MATER DEI"></option>
+            <option value="G.S N.D.A. RWAZA"></option>
+            <option value="G.S O BUTARE"></option>
+            <option value="G.S.RAMBURA (G)"></option>
+            <option value="G.S RAMBURA (F)"></option>
+            <option value="G.S.MATER DEI"></option>
+            <option value="G.S STE BERNADETTE SAVE"></option>
+            <option value="INSTITUT FILIPPO SMALDONE"></option>
+            <option value="INYANGE GIRLS SCHOOL"></option>
+            <option value="ISF NYAMASHEKE"></option>
+            <option value="KAGARAMA S.S"></option>
+            <option value="KAGITUMBA HIGH SCHOOL"></option>
+            <option value="KIZIGURO S.S"></option>
+            <option value="LYCEE DE GISENYI"></option>
+            <option value="LYCEE DE KIGALI"></option>
+            <option value="LYCEE DE RUSATIRA"></option>
+            <option
+              value="LYCEE NOTRE DAME DE LA VISITATION DE RULINDO"
+            ></option>
+            <option value="LYCEE NOTRE-DAME DE CITEAUX"></option>
+            <option value="Nyanza TSS"></option>
+            <option value="NYAMATA TTC"></option>
+            <option value="NYAMUMBA SECONDARY SCHOOL"></option>
+            <option value="PETIT SEMINAIRE BAPTISTE"></option>
+            <option value="Rwandan Learning Institute"></option>
+            <option value="SAINT JOSEPH BIRAMBO TVET SCHOOL"></option>
+            <option value="SHYOGWE SCHOOL"></option>
+          </datalist>
+        </div>
+        <button class="submit-btn">Sign up</button>
+      </div>
+
+      <div class="login slide-up">
+        <div class="center">
+          <h2 class="form-title" id="login"><span>or</span>Log in</h2>
+          <div class="form-holder">
+            <input
+              list="roles"
+              class="input"
+              name="role"
+              id="role"
+              placeholder="Choose your Role"
+            />
+            <datalist id="roles">
+              <option value="Student"></option>
+              <option value="Facilitator"></option>
+              <option value="Administrator"></option>
+            </datalist>
+            <input type="email" class="input" placeholder="Email" required />
+            <div class="pass">
+              <input
+                type="password"
+                class="input"
+                placeholder="Password"
+                id="password"
+                required
+              />
+              <i class="fa-solid fa-eye-slash" id="eye-icon"></i>
+            </div>
+          </div>
+          <button class="submit-btn">Log in</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="java.js"></script>
+    <!-- External JavaScript file -->
+  </body>
+</html>

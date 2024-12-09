@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team</title>
+    <style>
+        :root {
+            --primary-blue: #4a90e2;
+            --light-blue: #f5f9ff;
+            --lighter-blue: #e8f3ff;
+            --dark-blue: #2c5282;
+            --text-dark: #1a365d;
+            --text-light: #4a5568;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: var(--light-blue);
+            line-height: 1.6;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #ffffff 0%, var(--lighter-blue) 100%);
+            padding: 40px 20px 80px;
+            text-align: center;
+            position: relative;
+            margin-bottom: 100px;
+            box-shadow: 0 4px 20px rgba(74, 144, 226, 0.08);
+        }
+
+        .hero-section::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(180deg, transparent 0%, var(--light-blue) 100%);
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            color: var(--text-dark);
+            font-weight: 200;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 2px;
+            background: var(--primary-blue);
+        }
+
+        .hero-subtitle {
+            color: var(--text-light);
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            font-weight: 300;
+            line-height: 1.8;
+            letter-spacing: 0.5px;
+        }
+
+        .team-grid {
+            max-width: 1200px;
+            margin: -100px auto 80px;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .team-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(74, 144, 226, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(74, 144, 226, 0.12);
+        }
+
+        .member-image {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .member-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .team-card:hover .member-image img {
+            transform: scale(1.05);
+        }
+
+        .member-info {
+            padding: 30px;
+            text-align: center;
+            background: linear-gradient(to bottom, white, var(--lighter-blue));
+        }
+
+        .member-name {
+            color: var(--text-dark);
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .member-role {
+            color: var(--primary-blue);
+            font-size: 0.95rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .member-bio {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-blue);
+            border: 1px solid var(--primary-blue);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            background: white;
+        }
+
+        .social-link:hover {
+            background: var(--primary-blue);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 100px 20px 140px;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .team-grid {
+                margin-top: -60px;
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero-section">
+        <h1 class="hero-title">Meet Our Team</h1>
+        <p class="hero-subtitle">A dedicated group of professionals working together to bring innovation and excellence to every project. Together, we transform ideas into reality.</p>
+    </section>
+
+    <div class="team-grid">
+        <!-- Team Member 1 -->
+        <div class="team-card">
+            <div class="member-image">
+                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=800" alt="Sarah Johnson">
+            </div>
+            <div class="member-info">
+                <h2 class="member-name">Sarah Johnson</h2>
+                <p class="member-role">Creative Director</p>
+                <p class="member-bio">Leading our creative initiatives with over a decade of experience in design and innovation.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">in</a>
+                    <a href="#" class="social-link">tw</a>
+                    <a href="#" class="social-link">em</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Team Member 2 -->
+        <div class="team-card">
+            <div class="member-image">
+                <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?auto=format&fit=crop&w=800" alt="Michael Chen">
+            </div>
+            <div class="member-info">
+                <h2 class="member-name">Michael Chen</h2>
+                <p class="member-role">Technical Lead</p>
+                <p class="member-bio">Driving technical excellence with expertise in cutting-edge technologies and solutions.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">in</a>
+                    <a href="#" class="social-link">tw</a>
+                    <a href="#" class="social-link">em</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Team Member 3 -->
+        <div class="team-card">
+            <div class="member-image">
+                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800" alt="Emma Wilson">
+            </div>
+            <div class="member-info">
+                <h2 class="member-name">Emma Wilson</h2>
+                <p class="member-role">Product Manager</p>
+                <p class="member-bio">Bridging user needs with technical solutions to create exceptional product experiences.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">in</a>
+                    <a href="#" class="social-link">tw</a>
+                    <a href="#" class="social-link">em</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

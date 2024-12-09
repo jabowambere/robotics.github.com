@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Robotics And Innovation Hub</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+    
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+    
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Ubuntu:wght@500;700&display=swap"
+            rel="stylesheet">
+    
+        <!-- Icon Font Stylesheet -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    
+        <!-- Libraries Stylesheet -->
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/main.css" rel="stylesheet">
+    </head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        body {
+            background-color: #e3f2fd;
+        }
+
+        .page-header {
+            background: linear-gradient(to right, #f8f9fa, #e9ecef);
+            padding: 60px 20px;
+            text-align: center;
+            margin: 0 20px 40px;
+        }
+
+        .header-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .header-title:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: rgb(173, 216, 230, 0.8);
+            border-radius: 2px;
+        }
+
+        .header-subtitle {
+            font-size: 1.1rem;
+            color: #6c757d;
+            max-width: 600px;
+            margin: 20px auto 0;
+            line-height: 1.6;
+        }
+
+        .gallery-container {
+            margin: 40px auto;
+            padding: 0 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(375px, 1fr));
+            gap: 30px;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .video-container {
+            position: relative;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            overflow: hidden;
+            height: 0;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .content {
+            padding: 15px;
+        }
+
+        .content h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .content p {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            margin-bottom: 15px;
+        }
+
+        .read-more {
+            display: inline-block;
+            padding: 8px 20px;
+            background-color: white;
+            /* color: red; */
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .read-more:hover {
+            background-color: black;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .gallery-container {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 20px;
+            }
+        }
+    </style>
+<body>
+
+    <!-- Navbar Start -->
+    <div class="container-fluid sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark p-0">
+                <a href="index.html" class="navbar-brand">
+                    <h1 class="text-white"><span class="text-dark"></span>RAN</h1>
+                </a>
+                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About us</a>
+                            <div class="dropdown-menu bg-light mt-2">
+                                <a href="#" class="dropdown-item">About</a>
+                                <a href="team.html" class="dropdown-item">Our Team</a>
+
+                            </div>
+                        </div>
+                        <a href="#" class="nav-item nav-link">Services</a>
+                        <a href="#" class="nav-item nav-link">Our Media</a>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <a href="#" class="nav-item nav-link">Login</a>
+                    </div>
+                    <butaton type="button" class="btn text-white p-0 d-none d-lg-block" data-bs-toggle="modal"
+                        data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Hero Start -->
+    <div class="container-fluid pt-5 bg-primary hero-header">
+        <div class="container pt-5">
+            <div class="row g-5 pt-5">
+                <div class="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
+                    <h1 class="display-4 text-white mb-4 animated slideInRight">Our Media</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center justify-content-lg-start mb-0">
+                            <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Contact Us</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="col-lg-6 align-self-end text-center text-lg-end">
+                    <!-- <img class="img-fluid" src="img/hero-img.png" alt="" style="max-height: 300px;"> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+
+    <div class="page-header">
+        <h1 class="header-title">Discover Our Stories</h1>
+        <p class="header-subtitle">Explore our collection of stunning moments captured through the lens. Each story tells a unique tale waiting to be discovered.</p>
+    </div>
+
+    <div class="gallery-container">
+        <!-- Gallery Item 1 -->
+        <div class="gallery-item">
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/7z0ts42_gRs?si=-UlqksxuoAg9mr5r" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="content">
+                <h3>Mountain View</h3>
+                <p>A breathtaking view of the mountains during sunset, capturing the perfect moment of natural beauty.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </div>
+
+        <!-- Gallery Item 2 -->
+        <div class="gallery-item">
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/EyPMre1fURs?si=CpXIX9Ko-wL1UM1f" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="content">
+                <h3>Ocean Waves</h3>
+                <p>Crystal clear waters meeting the shore, creating a peaceful and serene atmosphere.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </div>
+
+        <!-- Gallery Item 3 -->
+        <div class="gallery-item">
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/xnZAnnDDc1w?si=SGR01LEKm7U2dB-z" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="content">
+                <h3>Forest Trail</h3>
+                <p>A winding path through the dense forest, surrounded by towering trees and lush vegetation.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </div>
+
+        <!-- Add more gallery items as needed -->
+    </div>
+
+
+    <!-- Footer Start -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="footer-title" style="color: white;">Robotics Club Rwanda</h3>
+                <p class="footer-description">Explore cutting-edge robotics innovations for an immersive experience.</p>
+            </div>
+            <div class="footer-sections" style="display: flex;">
+                <div class="footer-section">
+                    <h3 style="color: white;">Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 style="color: white;">Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="footer-section-3">
+                <div class="newsletter">
+                    <h3 style="color: white;">Subscribe to Newsletter</h3>
+                    <p class="newsletter-description">Stay updated with our latest news and updates!</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" class="newsletter-input" required>
+                        <button type="submit" class="newsletter-button">
+                            <span>Subscribe</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-content copyright">
+            <p>&copy; 2024 Robotics Club Rwanda. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
